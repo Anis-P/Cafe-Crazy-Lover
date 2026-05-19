@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Cafe Crazy Lover</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head><body>
+<div id="site-header"></div>
+<section class="block" style="padding-top:40px"><div class="container">
+  <div class="section-head reveal"><span class="eyebrow">Brewed Thoughts</span><h2>From the Crazy Lover journal</h2></div>
+  <div class="product-grid" id="blog-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))"></div>
+</div></section>
+<div id="site-footer"></div>
+<script src="js/data.js"></script><script src="js/layout.js"></script><script src="js/main.js"></script>
+<script>
+const POSTS = [
+  ['The Science of a Perfect Espresso','coffee-espresso.png','Inside the 9 grams, 9 bar, 25 seconds rule we live by.'],
+  ['Cold Brew vs Iced Coffee — Settled','coffee-caramel.png','Two cold drinks. Two very different souls.'],
+  ['Why We Use Single-Origin Arabica','coffee-cappuccino.png','Story behind our slow-roasted house beans.'],
+  ['Behind Our Signature Mocha','hero-coffee.png','How we crafted the drink that defines us.'],
+  ['The Art of Latte Foam','coffee-cappuccino.png','Microfoam is a skill. Here is how we nail it daily.'],
+  ['Pairing Coffee with Food','food-sandwich.png','A short guide for crazy pairing perfection.']
+];
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('blog-grid').innerHTML = POSTS.map(([t,img,d]) => `
+    <article class="product-card reveal">
+      <div class="img-wrap" style="aspect-ratio:16/10;padding:0"><img src="assets/${img}" alt="" style="max-height:none;width:100%;height:100%;object-fit:cover"></div>
+      <div class="body">
+        <span class="cat">Blog · 5 min read</span>
+        <h3>${t}</h3>
+        <p class="desc">${d}</p>
+        <a href="#" style="color:var(--mocha);font-weight:600;font-size:.9rem">Read more →</a>
+      </div>
+    </article>`).join('');
+});
+</script>
+</body></html>

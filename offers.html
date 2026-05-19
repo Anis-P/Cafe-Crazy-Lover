@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Offers — Cafe Crazy Lover</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head><body>
+<div id="site-header"></div>
+<section class="block" style="padding-top:40px"><div class="container">
+  <div class="section-head reveal"><span class="eyebrow">Limited Time</span><h2>Deals you'd be crazy to miss</h2></div>
+
+  <div class="offer-band reveal" style="margin-bottom:30px">
+    <div>
+      <span class="eyebrow" style="color:var(--gold)">First Order</span>
+      <h2>Flat <span style="color:var(--gold)">20% Off</span></h2>
+      <p style="opacity:.85;margin-bottom:18px">Use code <strong style="color:var(--gold)">CRAZY20</strong> · Min ₹199</p>
+      <a href="menu.html" class="btn btn-primary" style="background:var(--gold);color:var(--espresso)">Claim →</a>
+    </div>
+    <div style="text-align:center"><div class="pct">20%</div></div>
+  </div>
+
+  <div class="product-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+    <div class="testimonial reveal" style="background:linear-gradient(135deg,var(--mocha),var(--coffee));color:var(--cream)">
+      <span class="eyebrow" style="color:var(--gold)">Combo</span>
+      <h3 style="font-family:var(--font-display);font-size:1.6rem;margin:10px 0">Coffee + Sandwich @ ₹199</h3>
+      <p style="opacity:.85">Any hot coffee paired with our cheese toast or grilled sandwich.</p>
+      <a href="menu.html" class="btn" style="background:var(--gold);color:var(--espresso);margin-top:14px">Order Combo</a>
+    </div>
+    <div class="testimonial reveal" style="background:var(--espresso);color:var(--cream)">
+      <span class="eyebrow" style="color:var(--gold)">Happy Hours</span>
+      <h3 style="font-family:var(--font-display);font-size:1.6rem;margin:10px 0">Buy 1 Get 1 Free</h3>
+      <p style="opacity:.85">On all cold coffees, weekdays 3 PM – 6 PM.</p>
+      <a href="menu.html" class="btn" style="background:var(--gold);color:var(--espresso);margin-top:14px">Grab It</a>
+    </div>
+    <div class="testimonial reveal" style="background:linear-gradient(135deg,#c79a4b,#8b5e3c);color:var(--cream)">
+      <span class="eyebrow" style="color:var(--espresso)">Student Deal</span>
+      <h3 style="font-family:var(--font-display);font-size:1.6rem;margin:10px 0">15% Off Always</h3>
+      <p style="opacity:.9">Show your student ID and enjoy 15% off, every visit, every time.</p>
+      <a href="contact.html" class="btn" style="background:var(--espresso);color:var(--cream);margin-top:14px">Learn More</a>
+    </div>
+  </div>
+
+  <div class="section-head reveal" style="margin-top:60px"><span class="eyebrow">On Offer</span><h2>Items with active deals</h2></div>
+  <div class="product-grid" id="offer-grid"></div>
+</div></section>
+<div id="site-footer"></div>
+<script src="js/data.js"></script><script src="js/layout.js"></script><script src="js/main.js"></script>
+<script>document.addEventListener('DOMContentLoaded', () => renderProductGrid('#offer-grid', PRODUCTS.filter(p=>p.oldPrice)));</script>
+</body></html>
