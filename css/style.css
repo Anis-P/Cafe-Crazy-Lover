@@ -332,3 +332,78 @@ footer{background:var(--espresso);color:var(--cream);padding:70px 0 30px;margin-
   .form-row{flex-direction:column;gap:0}
   .container{padding:0 18px}
 }
+/* ============================================
+   MOBILE FIXES — All 3 Issues
+   ============================================ */
+
+@media(max-width:720px){
+
+  /* FIX 1 — Text/paragraph going outside screen */
+  body, .container, section, .about-text, .about-grid,
+  .hero-text, p, h1, h2, h3 {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+  }
+
+  .about-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .about-feats {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px !important;
+  }
+
+  /* FIX 2 — Logo name too big on mobile */
+  .logo {
+    font-size: 1rem !important;
+    gap: 6px !important;
+  }
+
+  .logo .logo-mark {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 16px !important;
+  }
+
+  /* FIX 3 — Mobile menu styling */
+  .nav-links {
+    top: 70px !important;
+    left: 0 !important;
+    right: 0 !important;
+    padding: 10px 0 !important;
+    border-radius: 0 0 20px 20px !important;
+    gap: 0 !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+  }
+
+  .nav-links a {
+    padding: 14px 24px !important;
+    font-size: 1rem !important;
+    border-bottom: 1px solid rgba(139,94,60,0.08) !important;
+    width: 100% !important;
+    display: block !important;
+    text-align: left !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: var(--cream-2) !important;
+    padding-left: 30px !important;
+    color: var(--mocha) !important;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none !important;
+  }
+
+  /* Fix nav inner padding */
+  .nav-inner {
+    padding: 14px 18px !important;
+  }
+}
